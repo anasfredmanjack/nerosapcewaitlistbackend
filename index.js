@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
 
 
 //Mongodb connection uri
-const dbURI = 'mongodb+srv://Admin:Admin02061408@nerospace.xxgfu.mongodb.net/Nerospace';
+const dbURI = process.env.DBURI;
 mongoose.connect(dbURI)
 .then((result)=>  {
     console.log('connected to db');
